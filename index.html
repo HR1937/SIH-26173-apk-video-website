@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="iTantra — offline multilingual low-bitrate communication prototype.">
+  <title>iTantra — Prototype</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="badge">ISRO • SIH 2026 • iTantra</div>
+      <h1>iTantra</h1>
+      <p class="subtitle">Indian multilingual TTS &amp; STT aided communication for low-bitrate links.</p>
+      <div class="actions">
+        <button id="viewVideoBtn" class="btn btn-primary" type="button">▶ View Video</button>
+        <a id="downloadBtn" class="btn btn-secondary" href="#" download>↓ Download APK</a>
+      </div>
+      <p class="hint">Watch the prototype demonstration or download the latest Android APK.</p>
+    </section>
+  </main>
+
+  <div id="videoModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+      <div class="modal-header">
+        <h2 id="videoTitle">iTantra Prototype Demo</h2>
+        <button id="closeVideoBtn" class="close-btn" type="button" aria-label="Close video">×</button>
+      </div>
+      <div class="video-wrap">
+        <iframe id="videoFrame" title="iTantra prototype video"
+          allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="fallback">
+        <span>If the video does not load inside the page:</span>
+        <a id="openDriveBtn" href="#" target="_blank" rel="noopener noreferrer">Open video in new tab</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="/config.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
