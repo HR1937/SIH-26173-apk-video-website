@@ -13,6 +13,8 @@
   becomes the file downloaded by this button.
 */
 window.ITANTRA_CONFIG = {
-  videoDriveUrl: "PASTE_YOUR_GOOGLE_DRIVE_VIDEO_LINK_HERE",
-  apkUrl: "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/latest/download/app-release.apk"
+  videoDriveUrl:
+    "https://drive.google.com/file/d/1t6B2A6Xz80PMivxombts1KXnC32zcFc4/view?usp=sharing",
+  apkUrl:
+    "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/latest/download/app-release.apk",
 };

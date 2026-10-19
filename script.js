@@ -9,13 +9,7 @@
   const openDriveBtn = document.getElementById("openDriveBtn");
 
   function getDriveFileId(url) {
-    if (
-      !url ||
-      url.includes(
-        "https://drive.google.com/file/d/1t6B2A6Xz80PMivxombts1KXnC32zcFc4/view?usp=sharing",
-      )
-    )
-      return null;
+    if (!url || url.includes("PASTE_YOUR")) return null;
     for (const pattern of [
       /\/file\/d\/([a-zA-Z0-9_-]+)/,
       /[?&]id=([a-zA-Z0-9_-]+)/,
