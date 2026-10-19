@@ -9,8 +9,17 @@
   const openDriveBtn = document.getElementById("openDriveBtn");
 
   function getDriveFileId(url) {
-    if (!url || url.includes("PASTE_YOUR")) return null;
-    for (const pattern of [/\/file\/d\/([a-zA-Z0-9_-]+)/, /[?&]id=([a-zA-Z0-9_-]+)/]) {
+    if (
+      !url ||
+      url.includes(
+        "https://drive.google.com/file/d/1t6B2A6Xz80PMivxombts1KXnC32zcFc4/view?usp=sharing",
+      )
+    )
+      return null;
+    for (const pattern of [
+      /\/file\/d\/([a-zA-Z0-9_-]+)/,
+      /[?&]id=([a-zA-Z0-9_-]+)/,
+    ]) {
       const match = url.match(pattern);
       if (match) return match[1];
     }
@@ -32,7 +41,10 @@
   function openVideo() {
     if (!driveFileId) {
       if (driveUrl) window.open(driveUrl, "_blank", "noopener,noreferrer");
-      else alert("Video is not configured yet. Add your Google Drive link in config.js.");
+      else
+        alert(
+          "Video is not configured yet. Add your Google Drive link in config.js.",
+        );
       return;
     }
     frame.src = `https://drive.google.com/file/d/${driveFileId}/preview`;
